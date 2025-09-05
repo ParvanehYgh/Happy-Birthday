@@ -1,4 +1,4 @@
-canvas {
+/* canvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -23,5 +23,47 @@ p > a:first-of-type {
   font-size: 20px;
 }
 body {
+  overflow: hidden;
+} */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;   
+  height: 100vh;  
+  display: block; 
+}
+
+p {
+  margin: 0;
+  position: absolute;
+  font-size: 3.5vw; 
+  font-family: Verdana, sans-serif;
+  color: #eee;
+  height: auto;
+  bottom: 10px; 
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  text-shadow: 0 0 2px white;
+  word-wrap: break-word;
+}
+
+p a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+span {
+  font-size: 2.5vw; 
+}
+
+p > a:first-of-type {
+  font-size: 5vw; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
   overflow: hidden;
 }

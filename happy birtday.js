@@ -5,7 +5,7 @@ let w = (c.width = window.innerWidth),
 (hh = h / 2),
   (opts = {
     // change the text in here //
-    strings: ["HAPPY", "BIRTHDAY!", "dear Farzad"],
+    strings: ["HAPPY", "BIRTHDAY!", "DEAR FARZAD"],
     charSize: 30,
     charSpacing: 35,
     lineHeight: 40,
@@ -374,7 +374,7 @@ function anim() {
 
 for (let i = 0; i < opts.strings.length; i++) {
   let str = opts.strings[i];
-  let strWidth = str.length * opts.charSpacing; // کل عرض رشته
+  let strWidth = str.length * opts.charSpacing; 
   for (let j = 0; j < str.length; j++) {
     letters.push(
       new Letter(

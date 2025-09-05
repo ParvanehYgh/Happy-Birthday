@@ -372,14 +372,14 @@ function anim() {
   if (done) for (var l = 0; l < letters.length; ++l) letters[l].reset();
 }
 
-for (let i = 0; i < opts.strings.length; ++i) {
-  for (var j = 0; j < opts.strings[i].length; ++j) {
+for (let i = 0; i < opts.strings.length; i++) {
+  let str = opts.strings[i];
+  let strWidth = str.length * opts.charSpacing; // کل عرض رشته
+  for (let j = 0; j < str.length; j++) {
     letters.push(
       new Letter(
-        opts.strings[i][j],
-        j * opts.charSpacing +
-          opts.charSpacing / 2 -
-          (opts.strings[i].length * opts.charSize) / 2,
+        str[j],
+        j * opts.charSpacing - strWidth / 2 + opts.charSpacing / 2,
         i * opts.lineHeight +
           opts.lineHeight / 2 -
           (opts.strings.length * opts.lineHeight) / 2
@@ -387,6 +387,22 @@ for (let i = 0; i < opts.strings.length; ++i) {
     );
   }
 }
+
+
+// for (let i = 0; i < opts.strings.length; ++i) {
+//   for (var j = 0; j < opts.strings[i].length; ++j) {
+//     letters.push(
+//       new Letter(
+//         opts.strings[i][j],
+//         j * opts.charSpacing -
+//           (opts.strings[i].length * opts.charSpacing) / 2,
+//         i * opts.lineHeight +
+//           opts.lineHeight / 2 -
+//           (opts.strings.length * opts.lineHeight) / 2
+//       )
+//     );
+//   }
+// }
 
 anim();
 
